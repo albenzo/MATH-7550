@@ -1,0 +1,83 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amscd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{listings}
+\usepackage{enumerate}
+
+\textwidth=15cm \textheight=22cm \topmargin=0.5cm \oddsidemargin=0.5cm \evensidemargin=0.5cm
+
+\newcommand{\sk}{\vskip 10mm}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\ra}{\rightarrow}
+
+\theoremstyle{plain}
+\newtheorem{problem}{Problem}
+\newtheorem{lemma}{Lemma}[problem]
+
+\theoremstyle{remark}
+\newtheorem{tpart}{}[problem]
+\newtheorem*{ppart}{}
+
+\begin{document}
+
+\begin{problem}[1]
+  Show that a second countable Hausdorff space $X$ with a functional
+  structure $F$ is an $n$-manifold if, and only if, every point in
+  $X$ has a neighborhood $U$ such that there are functions
+  $f_1,\ldots,f_n\in F(U)$ such that: a real valued function on $g$
+  on $U$ is in $F(U)$ if, and only if there exists a smooth function
+  $h(x_1,\ldots,x_n)$ of $n$ real variables $\ni g(p)=h(f_1(p),\ldots,f_n(p))$
+  for all $p\in U$.
+\end{problem}
+
+\begin{proof}
+  
+\end{proof}
+
+\sk
+
+\begin{problem}[3]
+  Show that a map $f:M\rightarrow N$ between smooth manifolds, with functional
+  structures $F_M$ and $F_N$, is smooth in the sense of definition 2.5
+  if, and only if, it is smooth in the sense of definition 2.4.
+\end{problem}
+
+\begin{itemize}
+\item[2.3:] A morphism of functionally structured spaces
+  \[ (X,F_X)\rightarrow (Y,F_Y) \]
+  is a map $\phi:X\rightarrow Y$ such that the composition $f\mapsto f\circ\phi$ carries
+  $F_Y(U)$ into $F_X(\phi^{-1}(U))$.
+\item[2.4:] A morphism is a smooth map if it is a morphism of functionally
+  structured spaces for smooth manifolds as functionally structured spaces.
+\item[2.5:] A map $f:M\rightarrow N$ between two smooth manifolds is said to be
+  smooth if, for any charts $\phi$ on $M$ and $\psi$ on $N$, the function
+  $\psi\circ f\circ\phi^{-1}$ is smooth where it is defined.
+\end{itemize}
+
+\begin{proof}
+  Let $\phi,\psi$ be charts for $M,N$ respectively and let $f:M\rightarrow N$ be a map that
+  is smooth in the sense that if $g\in F_N(V)$ for $V\subset N$ open then
+  $g\circ f\in F_M(f^{-1}(V))$. Then consider $\psi\circ f\circ \phi^{-1}$.
+\end{proof}
+
+\sk
+
+\begin{problem}[4]
+  Let $X$ be the graph of a real valued function $\theta(x)=|x|$ of a real
+  variable $x$. Define a functional structure on $X$ by taking $f\in F(U)$
+  if, and only if, $f$ is the restriction to $U$ of a $C^\infty$ function on some
+  open set $V$ in the plane with $U=V\cap X$. Show that $X$ with this structure
+  is \textit{not} diffeomorphic to the real line with the usual $C^\infty$ structure.
+\end{problem}
+
+\begin{proof}
+  
+\end{proof}
+
+\sk
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

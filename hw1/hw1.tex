@@ -60,7 +60,18 @@
 \begin{proof}
   Let $\phi,\psi$ be charts for $M,N$ respectively and let $f:M\rightarrow N$ be a map that
   is smooth in the sense that if $g\in F_N(V)$ for $V\subset N$ open then
-  $g\circ f\in F_M(f^{-1}(V))$. Then consider $\psi\circ f\circ \phi^{-1}$.
+  $g\circ f\in F_M(f^{-1}(V))$. Consider $\psi\circ f\circ \phi^{-1}$. Since both $\phi,\psi$ are diffeomorphisms
+  from their domain to their image they and their inverses will be smooth. It then
+  follows that if $V$ is the domain of $\psi$ that $\psi\in F_N(V)$. By
+  our assumption we then have that $\psi\circ f\in F_M(f^{-1}(V))$ implying that
+  $\psi\circ f$ is smooth. Since smoothness of functions is preserved by composition
+  we have that $\psi\circ f\circ\phi^{-1}$ is smooth.
+
+  Now suppose that $f:M\rightarrow N$ was smooth in the sense that $\psi\circ f\circ \phi^{-1}$ is smooth
+  wherever it is defined. Let $V\subset N$ and let $V_\alpha:=V\cap U_\alpha$ where $\psi_\alpha:U_\alpha\rightarrow\bb{R}$
+  is a chart of $N$. Then because of the union property of charts it will suffice
+  to show that the definition of smoothness holds for one such $V_\alpha$. Let
+  $g\in F_N(V_\alpha)$. Then $g\circ f\in F_M(f^{-1}(V_\alpha))$.
 \end{proof}
 
 \sk

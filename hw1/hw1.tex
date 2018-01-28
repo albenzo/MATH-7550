@@ -28,13 +28,52 @@
   structure $F$ is an $n$-manifold if, and only if, every point in
   $X$ has a neighborhood $U$ such that there are functions
   $f_1,\ldots,f_n\in F(U)$ such that: a real valued function on $g$
-  on $U$ is in $F(U)$ if, and only if there exists a smooth function
+  on $U$ is in $F(U)$ if, and only if, there exists a smooth function
   $h(x_1,\ldots,x_n)$ of $n$ real variables $\ni g(p)=h(f_1(p),\ldots,f_n(p))$
   for all $p\in U$.
 \end{problem}
 
 \begin{proof}
-  
+  Let $X$ be a second countable Hausdorff space with a functional
+  structure $F$. Suppose that $X$ is an $n$-manifold and let
+  $x\in X$ be a point with $U\subset X$ an open neighborhood of $X$.
+  Then by definition we have an algebra $F(U)$. Since $F(U)$
+  is an algebra we have a basis $(f_1,\ldots,f_n)$. Let
+  $g(p)=\sum c_if_i(p)$ for $p\in U$. Define $h=(x_1,\ldots,x_n)=\sum c_ix_i$.
+  Then $g(p)=h(f_1(p),\ldots,f_n(p))$ for all $p\in U$. If $g$ were
+  not in $F(U)$ then it would not be smooth. As such it could
+  not be of the form $h(f_1(p),\ldots,f_n(p))$ as if it were it
+  would be smooth. Therefore if $X$ is an $n$-manifold
+  $g\in F(U)$ if, and only if, there is a smooth $h$ of $n$ real
+  variables such that $g(p)=h(f_1(p),\ldots,f_n(p))$. 
+
+  Now suppose that given a real valued $g$ on $U$ that $g\in F(U)$
+  if, and only if, there is a smooth function $h$ such that
+  $g(p)=h(f_1(p),\ldots,f_n(p))$ for all $p\in U$. Let $x\in X$ and
+  let $U$ be the corresponding neighborhood of $x$ where the
+  above holds. Define $\phi:X\rightarrow V\subset\bb{R}^n$ via
+  \[\phi(p)=(f_1(p),\ldots,f_n(p)) \]
+  This map is continuous since each $f_i$ is continuous. Moreover
+  if $h\in C^\infty(V)$ then
+  \[ h\circ \phi=h(f_1,\ldots,f_n)\]
+  which places $h\circ \phi\in F_X(U=\phi^{-1}(V))$ by our assumption. Thus
+  $\phi$ is a morphism of functional structures from $(X,F_X(U))$
+  to $(V,C^\infty)$.
+
+  This map is surjective however it may not be injective. To repair this
+  suppose we have $p,q\in U$ such that $\phi(p)=\phi(q)$. Then
+  have $U_p,U_q$ be neighborhoods of $x$ that do not contain
+  $p$ or $q$ respectively (Hausdorff) and redefine $U:=U_p\cap U_q$. This is
+  again an open set and since it is a subset of the original our assumption
+  will still hold. Since the space is second countable we can repeat this
+  process of shrinking our neighborhood until we reach a point where
+  $\phi$ is injective. Thus $\phi$ is a bijection. Now consider $g\in F(U)$.
+  Then
+  \[ g\circ\phi^{-1}(x)=h(f_1\circ\phi^{-1}(x),\ldots,f_n\circ \phi^{-1}(x)) \in F(V) \]
+  \textbf{Elaborate}\\
+  Which shows that $\phi$ is in fact an isomorphism on functionally
+  structured spaces and as such $X$ is locally isomorphic to
+  $(\bb{R}^n,C^\infty)$ and thus a smooth manifold.
 \end{proof}
 
 \sk
@@ -44,18 +83,6 @@
   structures $F_M$ and $F_N$, is smooth in the sense of definition 2.5
   if, and only if, it is smooth in the sense of definition 2.4.
 \end{problem}
-
-\begin{itemize}
-\item[2.3:] A morphism of functionally structured spaces
-  \[ (X,F_X)\rightarrow (Y,F_Y) \]
-  is a map $\phi:X\rightarrow Y$ such that the composition $f\mapsto f\circ\phi$ carries
-  $F_Y(U)$ into $F_X(\phi^{-1}(U))$.
-\item[2.4:] A morphism is a smooth map if it is a morphism of functionally
-  structured spaces for smooth manifolds as functionally structured spaces.
-\item[2.5:] A map $f:M\rightarrow N$ between two smooth manifolds is said to be
-  smooth if, for any charts $\phi$ on $M$ and $\psi$ on $N$, the function
-  $\psi\circ f\circ\phi^{-1}$ is smooth where it is defined.
-\end{itemize}
 
 \begin{proof}
   Let $\phi,\psi$ be charts for $M,N$ respectively and let $f:M\rightarrow N$ be a map that
@@ -68,10 +95,16 @@
   we have that $\psi\circ f\circ\phi^{-1}$ is smooth.
 
   Now suppose that $f:M\rightarrow N$ was smooth in the sense that $\psi\circ f\circ \phi^{-1}$ is smooth
-  wherever it is defined. Let $V\subset N$ and let $V_\alpha:=V\cap U_\alpha$ where $\psi_\alpha:U_\alpha\rightarrow\bb{R}$
-  is a chart of $N$. Then because of the union property of charts it will suffice
-  to show that the definition of smoothness holds for one such $V_\alpha$. Let
-  $g\in F_N(V_\alpha)$. Then $g\circ f\in F_M(f^{-1}(V_\alpha))$.
+  wherever it is defined. Due to the union property of functional structures
+  it will suffice to show that $g\in F_N(V)$ implies $g\circ f\in F_M(f^{-1}(V))$
+  for a $V$ sufficiently small such that both $V$ and $f^{-1}$ fall in the
+  domains of single charts $\psi,\phi$. Let $g\in F_N(V)$. Then $g$ is smooth
+  which implies that $g\circ\psi^{-1}$ is smooth. By our assumption
+  $\psi\circ f\circ \phi^{-1}$ is smooth. Then if we compose we get that
+  \[ (g\circ\psi^{-1})\circ(\psi\circ f\circ\phi^{-1})\circ\phi =g\circ f\]
+  is smooth. Thus $g\circ f\in F_M(f^{-1}(V))$.
+
+  Therefore the two definitions for smooth maps are equivalent.
 \end{proof}
 
 \sk
@@ -84,9 +117,10 @@
   is \textit{not} diffeomorphic to the real line with the usual $C^\infty$ structure.
 \end{problem}
 
-\begin{proof}
-  
-\end{proof}
+Let $f(x,y):\bb{R}^2\rightarrow \bb{R}$ be $x+y$ rotated $\pi/4$ so that the former $x,y$ axes
+line up with $U$. Then $f|_U\equiv |z|$ for $z\in U$ which implies that $|\cdot|\in F(X)$ however
+this function is not smooth on the real line. Thus $X$ and $\bb{R}$ with the usual
+structure are not diffeomorphic.
 
 \sk
 

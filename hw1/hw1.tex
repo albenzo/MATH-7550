@@ -60,23 +60,12 @@
   $\phi$ is a morphism of functional structures from $(X,F_X(U))$
   to $(V,C^\infty)$.
 
-  In order to construct the inverse we will need to apply the
-  inverse function theorem.
-
-  \textbf{Use a modification of $\phi$ to get the inverse with the
-    inverse function theorem and compose to get a well defined inverse
-    Give a bit on why this must cause also be a morphism of functional
-    structures.}
-
-  % This map is surjective however it may not be injective. To repair this
-  % suppose we have $p,q\in U$ such that $\phi(p)=\phi(q)$. Then
-  % have $U_p,U_q$ be neighborhoods of $x$ that do not contain
-  % $p$ or $q$ respectively (Hausdorff) and redefine $U:=U_p\cap U_q$. This is
-  % again an open set and since it is a subset of the original our assumption
-  % will still hold. Since the space is second countable we can repeat this
-  % process of shrinking our neighborhood until we reach a point where
-  % $\phi$ is injective.
-  Thus $\phi$ is a bijection. Now consider $g\in F(U)$.
+  I tried to use Hausdorffness to force it to be injective as
+  well as trying to coerce the inverse function theorem to work
+  in this scenario. However I was unsucessful, but I'll continue
+  on without.
+  
+  Thus $\phi^{-1}$ has a well defined inverse.
 
   Then
   \[ g\circ\phi^{-1}(x)=h(f_1\circ\phi^{-1}(x),\ldots,f_n\circ \phi^{-1}(x)) \in F(V) \]

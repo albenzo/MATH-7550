@@ -44,7 +44,7 @@
   not in $F(U)$ then it would not be smooth. As such it could
   not be of the form $h(f_1(p),\ldots,f_n(p))$ as if it were it
   would be smooth. Therefore if $X$ is an $n$-manifold
-  $g\in F(U)$ if, and only if, there is a smooth $h$ of $n$ real
+  then $g\in F(U)$ if, and only if, there is a smooth $h$ of $n$ real
   variables such that $g(p)=h(f_1(p),\ldots,f_n(p))$. 
 
   Now suppose that given a real valued $g$ on $U$ that $g\in F(U)$
@@ -60,17 +60,26 @@
   $\phi$ is a morphism of functional structures from $(X,F_X(U))$
   to $(V,C^\infty)$.
 
-  This map is surjective however it may not be injective. To repair this
-  suppose we have $p,q\in U$ such that $\phi(p)=\phi(q)$. Then
-  have $U_p,U_q$ be neighborhoods of $x$ that do not contain
-  $p$ or $q$ respectively (Hausdorff) and redefine $U:=U_p\cap U_q$. This is
-  again an open set and since it is a subset of the original our assumption
-  will still hold. Since the space is second countable we can repeat this
-  process of shrinking our neighborhood until we reach a point where
-  $\phi$ is injective. Thus $\phi$ is a bijection. Now consider $g\in F(U)$.
+  In order to construct the inverse we will need to apply the
+  inverse function theorem.
+
+  \textbf{Use a modification of $\phi$ to get the inverse with the
+    inverse function theorem and compose to get a well defined inverse
+    Give a bit on why this must cause also be a morphism of functional
+    structures.}
+
+  % This map is surjective however it may not be injective. To repair this
+  % suppose we have $p,q\in U$ such that $\phi(p)=\phi(q)$. Then
+  % have $U_p,U_q$ be neighborhoods of $x$ that do not contain
+  % $p$ or $q$ respectively (Hausdorff) and redefine $U:=U_p\cap U_q$. This is
+  % again an open set and since it is a subset of the original our assumption
+  % will still hold. Since the space is second countable we can repeat this
+  % process of shrinking our neighborhood until we reach a point where
+  % $\phi$ is injective.
+  Thus $\phi$ is a bijection. Now consider $g\in F(U)$.
+
   Then
   \[ g\circ\phi^{-1}(x)=h(f_1\circ\phi^{-1}(x),\ldots,f_n\circ \phi^{-1}(x)) \in F(V) \]
-  \textbf{Elaborate}\\
   Which shows that $\phi$ is in fact an isomorphism on functionally
   structured spaces and as such $X$ is locally isomorphic to
   $(\bb{R}^n,C^\infty)$ and thus a smooth manifold.
@@ -85,6 +94,12 @@
 \end{problem}
 
 \begin{proof}
+  First note that given a chart $\phi:U\rightarrow\bb{R}^n$ that $\phi$ is a diffeomorphism
+  from $U$ to $\phi(U)$ with the smooth structure on $\phi(U)$ being generated
+  by the identity map $id_U$. To verify this we have that 
+  $id_U\circ\phi\circ\phi^{-1}=id_U$ is smooth since the $id_U$ is smooth. Checking that $\phi^{-1}$
+  is smooth is similar as we check $\phi\circ\phi^{-1}\circ id_U=id_U$ which is smooth.
+  
   Let $\phi,\psi$ be charts for $M,N$ respectively and let $f:M\rightarrow N$ be a map that
   is smooth in the sense that if $g\in F_N(V)$ for $V\subset N$ open then
   $g\circ f\in F_M(f^{-1}(V))$. Consider $\psi\circ f\circ \phi^{-1}$. Since both $\phi,\psi$ are diffeomorphisms
@@ -117,28 +132,11 @@
   is \textit{not} diffeomorphic to the real line with the usual $C^\infty$ structure.
 \end{problem}
 
-Let $f(x,y):\bb{R}^2\rightarrow \bb{R}$ be $x+y$ rotated $\pi/4$ so that the former $x,y$ axes
-line up with $U$. Then $f|_U\equiv |z|$ for $z\in U$ which implies that $|\cdot|\in F(X)$ however
+Let $f(x,y):\bb{R}^2\rightarrow \bb{R}$ be $x+y$ rotated counterclockwise $\pi/4$ so that the former $x,y$ axes
+line up with $U$. Then $f|_U\equiv |r|$ for $r\in U$ which implies that $|\cdot|\in F(X)$ however
 this function is not smooth on the real line. Thus $X$ and $\bb{R}$ with the usual
 structure are not diffeomorphic.
 
-\begin{problem}
-  
-\end{problem}
-
-\begin{proof}
-  
-\end{proof}
-
-\sk
-
-\begin{problem}
-  
-\end{problem}
-
-\begin{proof}
-  
-\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

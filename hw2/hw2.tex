@@ -33,9 +33,32 @@
   smooth structure on $S^3$.
 \end{problem}
 
-\begin{proof}
-  
-\end{proof}
+First note that every point $q\in S^3\subset\bb{H}$ will be included
+in the chart $\psi_q$. Moreover since $\psi_q$ will be a homeomorphism
+if $\phi$ is a homeomorphism as $p\mapsto q^{-1}p$ is continuous where defined.
+Thus all we need to show is that $\phi$ is 
+a homeomorphism and that for $q,p\in S^3$ that $\psi_q\psi_p^{-1}$ is smooth.
+
+The projection map $\phi$ is continuous. Define an inverse via
+\[ \phi^{-1}(y,z,w)=\sqrt{1-y^2-z^2-w^2}+iy+jz+kw \]
+This map is continuous as all of its components are continuous. Thus,
+since $\phi$ has a continuous inverse, it is indeed a homeomorphism.
+It then follows that $\psi_q$ is a homeomorphism due to the reasoning above.
+
+Now we will show that for $q,p\in S^3$ that $\psi_q\psi_p^{-1}$ is smooth where
+defined. Let $r=x+iy+jz+kw$ and $p=a+ib+jc+kd$.
+Then we expand $\psi_q\psi_p^{-1}$ as
+\begin{align*}
+  \psi_q\psi_p^{-1}(r)&=\psi_q(p\phi^{-1}(r))\\
+                &= \psi_q(p(\sqrt{1-y^2-z^2-w^2}+iy+jz+kw))\\
+%                &= \psi_q((a\sqrt{1-y^2-z^2-w^2}-by-cz-dw)+(ay+\sqrt{1-y^2-z^2-w^2}b+cw-dz)i
+%                  +(az-bw+c\sqrt{1-y^2-z^2-w^2}+dy)j+(aw+bz-cy+d\sqrt{1-y^2-z^2-w^2})k)\\
+                &= \phi(q^{-1}p(\sqrt{1-y^2-z^2-w^2}+iy+jz+kw))\\
+\end{align*}
+
+The expression $q^{-1}p(\sqrt{1-y^2-z^2-w^2}+iy+jz+kw)$ is smooth where defined
+and the projection $\phi$ is smooth. Therefore $\psi_q\psi_p^{-1}$ is smooth and
+therefore the $\psi_q$s form a chart for $S^3\subset\bb{H}$.
 
 \sk
 
@@ -53,9 +76,7 @@
   \end{enumerate}
 \end{problem}
 
-\begin{proof}
-  
-\end{proof}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

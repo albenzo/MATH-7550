@@ -58,7 +58,7 @@ Then we expand $\psi_q\psi_p^{-1}$ as
 
 The expression $q^{-1}p(\sqrt{1-y^2-z^2-w^2}+iy+jz+kw)$ is smooth where defined
 and the projection $\phi$ is smooth. Therefore $\psi_q\psi_p^{-1}$ is smooth and
-therefore the $\psi_q$s form a chart for $S^3\subset\bb{H}$.
+therefore the $\psi_q$s form an atlas for $S^3\subset\bb{H}$.
 
 \sk
 
@@ -76,7 +76,35 @@ therefore the $\psi_q$s form a chart for $S^3\subset\bb{H}$.
   \end{enumerate}
 \end{problem}
 
+\begin{enumerate}
+\item The smooth manifold $X$ will be diffeomorphic to $\bb{R}$ by the map
+  $\phi$. To verify this we check that
+  \[ id_{\bb{R}}\circ x^3\circ x^{-1/3}=x\]
+  and
+  \[ x^3\circ x^{1/3}\circ id_{\bb{R}}^{-1}=x\]
+  are smooth. However since they are both the identity map we have that it is
+  the case that $\phi$ and $\phi^{-1}$ are both smooth. Thus $\phi$ is a diffeomorphism
+  and it follows that $X$ and $\bb{R}$ are diffeomorphic.
+  
+\item The identity map will not be a diffeomorphism as
+  \[ id_{\bb{R}}\circ id\circ x^{1/3}=x^{1/3}\]
+  is not a smooth map and thus $id$ cannot be a diffeomorphism.
+  
+\item Together they do not form an atlas as
+  \[ id\circ x^{1/3}=x^{1/3}\]
+  is not smooth at zero.
+  
+\item Yes, the maps $\phi,\psi$ form an atlas on $X^+$. To verify this note
+  first that every point in $X^+$ is in the domain of $\phi$ of $\psi$,
+  $X$ and $X^+\setminus\{0\}$ respectively. We also have that $x^3$ and $\frac{1}{x}$ are
+  homeomorphisms on their respective domains. Finally the maps
+  \[ \phi\psi^{-1}=x^{-3}\]
+  and
+  \[ \psi\phi^{-1}=\frac{1}{x^{-1/3}}\]
+  are both smooth so long as we avoid both $0$ and $\infty$.
 
+  Therefore $\phi$ and $\psi$ form an atlas for $X^+$.
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

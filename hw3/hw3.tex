@@ -53,7 +53,15 @@
 \end{problem}
 
 \begin{proof}
-  
+  First note that by definition that
+  \[
+    \langle \nabla f,v\rangle=\frac{\partial f}{\partial x_i}v^i
+  \]
+  Likewise for the other term we have
+  \[
+    D_{\gamma_v}f=\frac{d}{dt}f(\gamma_v(t))|_{t=0}=\frac{\partial f}{\partial x_i}\frac{d\gamma_v}{dt}|_{t=0}=\frac{\partial f}{x_i}v^i
+  \]
+  which completes the proof.
 \end{proof}
 
 \sk

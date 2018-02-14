@@ -31,7 +31,17 @@
 \end{problem}
 
 \begin{proof}
-  
+  The traditional definition of a tangent vector in Euclidean space
+  for $\phi(t)=(\phi_1(t),\ldots,\phi_n(t))$ would be
+  \[
+    \phi'(t)=(\phi_1'(t),\ldots,\phi_n'(t))
+  \]
+  However if we identify the tangent space as euclidean space
+  then the pushforward $\phi_*:\bb{R}\rightarrow\bb{R}^n$ will be
+  \[
+    \phi_*\left(\frac{d}{dt}\right)=\frac{d\phi}{dt}=(\phi_1',\ldots,\phi_n')
+  \]
+  which shows that the two notions agree.
 \end{proof}
 
 \sk
@@ -74,7 +84,16 @@
 \end{problem}
 
 \begin{proof}
-  
+  Since we are working in a neighborhood of $p\in M^m$ we can work in
+  local coordinates. Then the gradient of $f$ will be
+  $\nabla f= \langle\frac{\partial f}{x_1},\ldots,\frac{\partial f}{x_n}\rangle$. Moreover
+  we have that $\nabla f(x)=0$ for $x\in M^m$ since $f$ is constant on $M^m$.
+
+  Let $\sum a^i\frac{\partial}{\partial x_i}$ be in $T_p(M^m)$. Then we have that
+  \[
+    \nabla f(x)\cdot\sum a_i\frac{\partial}{x_i}=0
+  \]
+  which implies that $\nabla f$ is normal to $T_p(M^m)$.
 \end{proof}
 
 \sk

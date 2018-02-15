@@ -84,16 +84,12 @@
 \end{problem}
 
 \begin{proof}
-  Since we are working in a neighborhood of $p\in M^m$ we can work in
-  local coordinates. Then the gradient of $f$ will be
-  $\nabla f= \langle\frac{\partial f}{x_1},\ldots,\frac{\partial f}{x_n}\rangle$. Moreover
-  we have that $\nabla f(x)=0$ for $x\in M^m$ since $f$ is constant on $M^m$.
-
-  Let $\sum a^i\frac{\partial}{\partial x_i}$ be in $T_p(M^m)$. Then we have that
-  \[
-    \nabla f(x)\cdot\sum a_i\frac{\partial}{x_i}=0
-  \]
-  which implies that $\nabla f$ is normal to $T_p(M^m)$.
+  Since our manifold is smoothly embedded in $\bb{R}^n$ we can treat
+  the tangent space as a subspace of $\bb{R}^n$. Let $(v_1,\ldots,v_m)$
+  be a basis for $T_p(M)$. Then each of the $\nabla f(p)\cdot v_i$ will be
+  zero as $f$ is constant on $M$ and $v_i$ is a tangent vector for
+  $M$. Since $\nabla f(p)$ is perpendicular to all vectors in the basis
+  for $T_p(M)$ it is perpendicular to $T_p(M)$ itself.
 \end{proof}
 
 \sk

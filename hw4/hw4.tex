@@ -28,9 +28,24 @@
   what are the regular values?
 \end{problem}
 
-\begin{proof}
-  
-\end{proof}
+Since $\phi$ is a map from $\bb{R}$ to $\bb{R}$ we can acquire
+the critical points via the usual method from calculus.
+Thus the regular values the points that are not solutions to
+\[
+  \sin(x)+x\cos(x) =0
+\]
+
+\sk
+
+\begin{problem}[2]
+  For the map $\phi(x,y)=x^2-y^2$ of the plane to the line, what
+  are the regular values?
+\end{problem}
+
+The pushforward for $\phi$ will be $\phi_*(x,y)=(2x,-2y)$. Since we are
+mapping from 2 dimensions to 1 the regular values will
+be those where $\phi_*$ is surjective. This will be the points
+where neither $x$ nor $y$ are 0.
 
 \sk
 
@@ -39,9 +54,12 @@
   what are the regular values?
 \end{problem}
 
-\begin{proof}
-  
-\end{proof}
+First rewrite the function as $\phi(r)=\sin(r^2)$. Then if
+we take the derivative we get $\phi'(r)=2r\cos(r^2)$. Thus
+the critical values are when $r=0$ or when $r=\pm\sqrt{\frac{(2k+1)\pi}{2}}$
+for $k\in \bb{Z}$. Translating back to $x,y$ we have that the
+regular values are when the equations $x^2+y^2=0$ and
+$x^2+y^2=\frac{(2k+1)\pi}{2}$ for $k\in \bb{Z}$ do not hold.
 
 \sk
 
@@ -53,7 +71,12 @@
 \end{problem}
 
 \begin{proof}
-  
+  Define $\delta(t)=|\gamma(t)|$. Then the critical points of
+  $\delta$ are precisely the points in $K$. By Sard's theorem
+  the critical points of $\delta$ are of measure zero. Thus
+  $K$ is of measure and cannot contain any intervals. It
+  then follows that no point in $K$ has an open neighborhood
+  around it and as such the interior of $K$ is empty.
 \end{proof}
 
 \sk
@@ -65,7 +88,7 @@
 \end{problem}
 
 \begin{proof}
-  
+  Let $\gamma:C\rightarrow\bb{R}^4$ be a smooth embedding of $C$ into $\bb{R}^4$.
 \end{proof}
 
 \sk

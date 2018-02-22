@@ -97,7 +97,7 @@ $x^2+y^2=\frac{(2k+1)\pi}{2}$ for $k\in \bb{Z}$ do not hold.
 \end{problem}
 
 \begin{proof}
-  Let $\gamma:C\rightarrow\bb{R}^4$ be a smooth embedding of $C$ into $\bb{R}^4$.
+  Let $\gamma:S^1\rightarrow\bb{R}^4$ be a smooth embedding of $S^1$ into $\bb{R}^4$.
   There are two obstacles to finding a hyperplane for which the
   projection of $\gamma$ onto $H$ is an embedding. The first is that
   we need to preserve injectivity of the function itself and the
@@ -112,9 +112,9 @@ $x^2+y^2=\frac{(2k+1)\pi}{2}$ for $k\in \bb{Z}$ do not hold.
   and smooth since $\gamma$ is an embedding and as such there will be
   no point wherein $|\gamma'(t)|=0$.
 
-  Next define $g(s,t):S^1\times s^1\setminus\{(t,t)|t\in S^1\}\rightarrow S^3$ as
+  Next define $g(s,t):S^1\times S^1\setminus\{(t,t)|t\in S^1\}\rightarrow S^3$ as
   \[
-    G(s,t) = \frac{\gamma(s)-\gamma(t)}{|\gamma(s)-\gamma(t)|}
+    g(s,t) = \frac{\gamma(s)-\gamma(t)}{|\gamma(s)-\gamma(t)|}
   \]
   This function will also be well defined and smooth since $\gamma$ is an embedding
   and due to us explicitly removing points where $s=t$.
@@ -126,7 +126,7 @@ $x^2+y^2=\frac{(2k+1)\pi}{2}$ for $k\in \bb{Z}$ do not hold.
   When projecting $\gamma$ onto a hyperplane with normal vector $n$ we break
   the immersion property if $f(t)=n$ for any $t$. Similarly we break
   injectivity if $g(s,t)=n$ for any $s,t$ in the domain of $g$. However
-  since $S^3$ is a 3-manifold, $S^1$ is a 1-manifold, $S^1\times s^1\setminus\{(t,t)|t\in S^1\}$
+  since $S^3$ is a 3-manifold, $S^1$ is a 1-manifold, $S^1\times S^1\setminus\{(t,t)|t\in S^1\}$
   is a 2-manifold, and the fact that Sard's theorem implies that
   space filling curves are not smooth it must be the case that
   there is a vector $n\in S^3$ such that $n$ is not in the image of either $f$

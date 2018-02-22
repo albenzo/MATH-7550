@@ -71,10 +71,19 @@ $x^2+y^2=\frac{(2k+1)\pi}{2}$ for $k\in \bb{Z}$ do not hold.
 \end{problem}
 
 \begin{proof}
-  Define $\delta(t)=|\gamma(t)|$. Then the critical points of
-  $\delta$ are precisely the points in $K$. By Sard's theorem
+  Define $\delta(t)=|\gamma(t)|$. The function $\delta$ is smooth so long as
+  $\gamma$ avoids the origin. However since $\gamma$ is smooth this can
+  only happen either a finite number of times or if $\gamma$ constant
+  at the origin. In the latter case $K=\emptyset$.
+
+  In the other case however $\bb{R}\setminus\{t\in \bb{R}|\gamma(t)\}$ is open
+  and as such a manifold. Thus we have that $\delta$ is smooth and
+  we can apply Sard's theorem. Then the critical points of
+  $\delta$ are precisely the points in $K$ without the removed points
+  above. By Sard's theorem
   the critical points of $\delta$ are of measure zero. Thus
-  $K$ is of measure and cannot contain any intervals. It
+  $K$ is the union of a finite set and a measure zero set and as
+  such is of measure zero and cannot contain any intervals. It
   then follows that no point in $K$ has an open neighborhood
   around it and as such the interior of $K$ is empty.
 \end{proof}
@@ -89,6 +98,44 @@ $x^2+y^2=\frac{(2k+1)\pi}{2}$ for $k\in \bb{Z}$ do not hold.
 
 \begin{proof}
   Let $\gamma:C\rightarrow\bb{R}^4$ be a smooth embedding of $C$ into $\bb{R}^4$.
+  There are two obstacles to finding a hyperplane for which the
+  projection of $\gamma$ onto $H$ is an embedding. The first is that
+  we need to preserve injectivity of the function itself and the
+  second is that we need to ensure that it remains an immersion.
+
+  To deal with the latter define a function
+  \[
+    f(t):S^1\rightarrow S^3
+  \]
+  via $f(t)=\frac{\gamma'(t)}{|\gamma'(t)|}$. This function will give us the
+  unit tangent vector to $\gamma$ at time $t$. Moreover it is well defined
+  and smooth since $\gamma$ is an embedding and as such there will be
+  no point wherein $|\gamma'(t)|=0$.
+
+  Next define $g(s,t):S^1\times s^1\setminus\{(t,t)|t\in S^1\}\rightarrow S^3$ as
+  \[
+    G(s,t) = \frac{\gamma(s)-\gamma(t)}{|\gamma(s)-\gamma(t)|}
+  \]
+  This function will also be well defined and smooth since $\gamma$ is an embedding
+  and due to us explicitly removing points where $s=t$.
+
+  Since translating a 3-dimensional hyperplane would not affect the projection
+  of $\gamma$ we can specify each hyperplane $H$ by its unit normal vector $n$ which is
+  an element of $S^3$.
+
+  When projecting $\gamma$ onto a hyperplane with normal vector $n$ we break
+  the immersion property if $f(t)=n$ for any $t$. Similarly we break
+  injectivity if $g(s,t)=n$ for any $s,t$ in the domain of $g$. However
+  since $S^3$ is a 3-manifold, $S^1$ is a 1-manifold, $S^1\times s^1\setminus\{(t,t)|t\in S^1\}$
+  is a 2-manifold, and the fact that Sard's theorem implies that
+  space filling curves are not smooth it must be the case that
+  there is a vector $n\in S^3$ such that $n$ is not in the image of either $f$
+  or $g$. It then follows that the projection of $\gamma$ onto the hyperplane
+  specified by $n$ is an embedding.
+
+  Therefore if $C$ is a smoothly embedded circle in $\bb{R}^4$ there
+  exists a 3-dimensional hyperplane $H$ such that the projection of $C$
+  to $H$ is an embedding.
 \end{proof}
 
 \sk

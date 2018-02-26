@@ -24,12 +24,22 @@
 \begin{document}
 
 \begin{problem}
-  Consider the real valued function $f(x,y,z)=(2-(x^2+y^2)^{1/2})^2+z^2$ on $\bb{R}^3\setminus\{(0,0,z)\}$. Show that $1$ is a regular value of $f$. Identify the manifold $M=f^{-1}(1)$.
+  Consider the real valued function $f(x,y,z)=(2-(x^2+y^2)^{1/2})^2+z^2$
+  on $\bb{R}^3\setminus\{(0,0,z)\}$. Show that $1$ is a regular value of $f$.
+  Identify the manifold $M=f^{-1}(1)$.
 \end{problem}
 
-\begin{proof}
-  
-\end{proof}
+First we calculate the partials
+\[
+  \frac{\partial f}{\partial x}=x\left(2-\frac{4}{(x^2+y^2)^{1/2}}\right) ,
+  \quad\frac{\partial f}{\partial y}=y\left(2-\frac{4}{(x^2+y^2)^{1/2}}\right) ,
+  \quad\frac{\partial f}{\partial z}= 2z 
+\]
+
+Then the critical points of $f$ are those for which $f_*$ is not
+surjective.
+
+The manifold is the torus $T^2$.
 
 \sk
 
@@ -41,10 +51,8 @@
   Identify the manifold $M\cap N$.
 \end{problem}
 
-\begin{proof}
-  
-\end{proof}
 
+The manifold is two disjoint copies of $S^1$.
 \sk
 
 \begin{problem}
@@ -55,9 +63,8 @@
   Is $M\cap N$ a manifold?
 \end{problem}
 
-\begin{proof}
-  
-\end{proof}
+
+It is a manifold and it is a single copy of $S^1$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

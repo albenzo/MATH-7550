@@ -58,24 +58,14 @@ The points of intersection are
   N\cap M = \{(x,y,z)|z=\pm 1, x^2+y^2=4\}
 \]
 
-Given any point $p\in\bb{R}^3$ the tangent space $T_p(\bb{R}^3)$ is equivalent
-to $\bb{R}^3$. Define the function $h_+:T^2\rightarrow\bb{R}$ as the height of a point
-$p\in T^2$ with respect the given embedding. We can write this as
-\[
-  h_+(x,y)= \sqrt{-{\left(\sqrt{x^{2} + y^{2}} - 2\right)}^{2} + 1}
-\]
+Take the normal vector to $M$ at one of the points of intersection using
+the partial derivatives above to get $\langle 0,0,\pm 2\rangle$ where the positive is
+the top circle and the bottom circle is the negative. Similarly the normal
+vector to $N$ is $\langle 2x,2y,0\rangle$. Since both $x$ and $y$ cannot be zero on the
+intersection and the normal vectors for each surface are not parallel
+we have that for $p\in M\cap N$ that $T_p M+T_p N=T_p\bb{R}^3$ which shows
+that $M$ and $N$ are transverse.
 
-By taking the partial derivatives with respect to $x$ and $y$ we get
-\[
-\frac{\partial f}{\partial x} = -\frac{x {\left(\sqrt{x^{2} + y^{2}} - 2\right)}}{\sqrt{x^{2} + y^{2}} \sqrt{-{\left(\sqrt{x^{2} + y^{2}} - 2\right)}^{2} + 1}},\quad \frac{\partial f}{\partial y}=-\frac{y {\left(\sqrt{x^{2} + y^{2}} - 2\right)}}{\sqrt{x^{2} + y^{2}} \sqrt{-{\left(\sqrt{x^{2} + y^{2}} - 2\right)}^{2} + 1}}
-\]
-
-which are both zero when $x^2+y^2=4$. Thus the height is not changing on that circle and
-it then follows that the tangent plane for such a point is parallel to the $xy$-plane. However
-since $N$ is a cylinder in the $z$ direction the tangent plane at any point will include
-the $z$ direction. As such at any point of the intersection of $M,N$ for $z>0$ we have
-that $TM+TN=\bb{R}^3$. Identical reasoning follows for $z<0$. Thus the manifolds
-$N$ and $M$ are transverse.
 
 The manifold is two disjoint copies of $S^1$.
 \sk

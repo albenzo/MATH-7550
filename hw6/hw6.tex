@@ -32,6 +32,10 @@
   Find the vector field on $S^2$ induced by this flow.
 \end{problem}
 
+Define the vector field $\xi$ on $\bb{R}^3$ as $\langle 0,-z,y\rangle$. Then
+the corresponding vector field on $S^2$ is the projection of $\xi$
+onto $S^2$.
+
 \sk
 
 \begin{problem}
@@ -40,19 +44,45 @@
   this vector field corresponds to the initial value problem $dy/dt=y,y(0)=x$.)
 \end{problem}
 
+If we solve the differential equation $\frac{dy}{dt}=y$ we get
+$y=Ae^t$. Solving for initial conditions we get
+\[
+  \theta(t,x)=xe^t
+\]
+as our flow.
+
 \sk
 
 \begin{problem}[4]
   If $X$ and $Y$ vector fields on $M$ then $XY$ makes sense as an operator
   on smooth real valued functions on $M$. Show that $[X,Y]=XY-YX$ is a vector
   field. (This is called the ``Lie bracket'' of $X$ and $Y$. Sometimes it is
-  defined with opposite sign.) Also show t hat $XY$ itself is not a vector
+  defined with opposite sign.) Also show that $XY$ itself is not a vector
   field.
 \end{problem}
 
 \begin{proof}
-  
+  Let $X=a^i\frac{\partial}{\partial x_i}$ and $Y=b^i\frac{\partial}{\partial x_i}$ be vector fields and let
+  $f$ be a smooth function. Then
+  \[
+    XYf = a^j\frac{\partial Yf}{x_j}=a^j\frac{\partial(b^i\frac{\partial f}{\partial x_i})}{\partial x_j}=a^j(\frac{\partial b^i}{\partial x_j}\frac{\partial f}{\partial x_i}+b^i\frac{\partial^2 f}{\partial x_i\partial x_j}) = a^j\frac{\partial b^i}{\partial x_j}\frac{\partial f}{\partial x_i}+a^ib^i\frac{\partial^2 f}{\partial x_i\partial x_j}
+  \]
+  and similarly
+  \[
+    YXf = b^j\frac{\partial a^i}{\partial x_j}\frac{\partial f}{\partial x_i}+b^ia^i\frac{\partial^2 f}{\partial x_i\partial x_j}
+  \]
+  Then the Lie bracket of $X$ and $Y$ is
+  \[
+    [X,Y]f=XYf-YXf=a^j\frac{\partial b^i}{\partial x_j}\frac{\partial f}{\partial x_i}+a^ib^i\frac{\partial^2 f}{\partial x_i\partial x_j}-b^j\frac{\partial a^i}{\partial x_j}\frac{\partial f}{\partial x_i}+b^ia^i\frac{\partial^2 f}{\partial x_i\partial x_j} = (a^j\frac{\partial b^i}{\partial x_j}-b^j\frac{\partial a^i}{\partial x_j})\frac{\partial f}{\partial x_i}
+  \]
+  which shows that $[X,Y]$ is in fact a vector field.
 \end{proof}
+
+From the above calculation one can see that $XY$ is not a vector field as
+\[
+  XYf = a^j\frac{\partial b^i}{\partial x_j}\frac{\partial f}{\partial x_i}+a^ib^i\frac{\partial^2 f}{\partial x_i\partial x_j}
+\]
+which is not in the proper form to be a vector field.
 
 \sk
 

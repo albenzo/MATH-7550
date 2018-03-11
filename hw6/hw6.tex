@@ -35,9 +35,15 @@
   Find the vector field on $S^2$ induced by this flow.
 \end{problem}
 
-Define the vector field $\xi$ on $\bb{R}^3$ as $\langle 0,-z,y\rangle$. Then
-the corresponding vector field on $S^2$ is the projection of $\xi$
-onto $S^2$.
+Take the derivative of $\theta$ with respect to time to get
+\[
+  \frac{\partial \theta}{\partial t}(\langle x,y,z\rangle) = \langle 0,-y\sin(t)-z\cos(t),y\cos(t)-z\sin(t)\rangle
+\]
+Then set $t=0$ to get the vector field
+\[
+  \xi(\langle x,y,z\rangle) = \langle 0,-z,y\rangle
+\]
+as a vector field on $S^2$ corresponding to the flow $\theta$.
 
 \sk
 
@@ -94,7 +100,8 @@ which is not in the proper form to be a vector field.
   Describe the resulting flow.
 \end{problem}
 
-\includegraphics[scale=.5]{klein}
-
+\begin{center}
+  \includegraphics[scale=.5]{klein}  
+\end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

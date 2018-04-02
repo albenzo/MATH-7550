@@ -43,7 +43,7 @@ Then set $t=0$ to get the vector field
 \[
   \xi(\langle x,y,z\rangle) = \langle 0,-z,y\rangle
 \]
-as a vector field on $S^2$ corresponding to the flow $\theta$.
+on $S^2$ corresponding to the flow $\theta$.
 
 \sk
 
@@ -74,7 +74,7 @@ as our flow.
   Let $X=a^i\frac{\partial}{\partial x_i}$ and $Y=b^i\frac{\partial}{\partial x_i}$ be vector fields and let
   $f$ be a smooth function. Then
   \[
-    XYf = a^j\frac{\partial Yf}{x_j}=a^j\frac{\partial(b^i\frac{\partial f}{\partial x_i})}{\partial x_j}=a^j(\frac{\partial b^i}{\partial x_j}\frac{\partial f}{\partial x_i}+b^i\frac{\partial^2 f}{\partial x_i\partial x_j}) = a^j\frac{\partial b^i}{\partial x_j}\frac{\partial f}{\partial x_i}+a^ib^i\frac{\partial^2 f}{\partial x_i\partial x_j}
+    XYf = a^j\frac{\partial Yf}{x_j}=a^j\frac{\partial(b^i\frac{\partial f}{\partial x_i})}{\partial x_j}=a^j\left(\frac{\partial b^i}{\partial x_j}\frac{\partial f}{\partial x_i}+b^i\frac{\partial^2 f}{\partial x_i\partial x_j}\right) = a^j\frac{\partial b^i}{\partial x_j}\frac{\partial f}{\partial x_i}+a^ib^i\frac{\partial^2 f}{\partial x_i\partial x_j}
   \]
   and similarly
   \[
@@ -82,7 +82,7 @@ as our flow.
   \]
   Then the Lie bracket of $X$ and $Y$ is
   \[
-    [X,Y]f=XYf-YXf=a^j\frac{\partial b^i}{\partial x_j}\frac{\partial f}{\partial x_i}+a^ib^i\frac{\partial^2 f}{\partial x_i\partial x_j}-b^j\frac{\partial a^i}{\partial x_j}\frac{\partial f}{\partial x_i}+b^ia^i\frac{\partial^2 f}{\partial x_i\partial x_j} = (a^j\frac{\partial b^i}{\partial x_j}-b^j\frac{\partial a^i}{\partial x_j})\frac{\partial f}{\partial x_i}
+    [X,Y]f=XYf-YXf=a^j\frac{\partial b^i}{\partial x_j}\frac{\partial f}{\partial x_i}+a^ib^i\frac{\partial^2 f}{\partial x_i\partial x_j}-b^j\frac{\partial a^i}{\partial x_j}\frac{\partial f}{\partial x_i}+b^ia^i\frac{\partial^2 f}{\partial x_i\partial x_j} = \left(a^j\frac{\partial b^i}{\partial x_j}-b^j\frac{\partial a^i}{\partial x_j}\right)\frac{\partial f}{\partial x_i}
   \]
   which shows that $[X,Y]$ is in fact a vector field.
 \end{proof}

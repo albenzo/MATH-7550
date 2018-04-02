@@ -1,0 +1,69 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amscd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{listings}
+\usepackage{enumerate}
+\usepackage[all,cmtip]{xy}
+
+\textwidth=15cm \textheight=22cm \topmargin=0.5cm \oddsidemargin=0.5cm \evensidemargin=0.5cm
+
+\newcommand{\sk}{\vskip 10mm}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\ra}{\rightarrow}
+
+\theoremstyle{plain}
+\newtheorem{problem}{Problem}
+\newtheorem{lemma}{Lemma}[problem]
+
+\theoremstyle{remark}
+\newtheorem{tpart}{}[problem]
+\newtheorem*{ppart}{}
+
+\begin{document}
+
+\begin{problem}
+  On an open set $U\subset \bb{R^n}$ show that the exterior derivative $d$ is
+  the only operator $d:\Omega^p(U)\rightarrow\Omega^{p+1}(U)$ satisfying:
+  \begin{enumerate}
+  \item[(a)] $d(\omega+\eta)=d\omega+\eta$
+  \item[(b)] $\omega\in\Omega^p(U),\eta\in\Omega^q(U)\Rightarrow
+    d(\omega\wedge \eta)=d\omega\wedge\eta+(-1)^p\omega\wedge d\eta$
+  \item[(c)] $f\in\Omega^0(U)\Rightarrow dfX)=X(f)$
+  \item[(d)] $f\in\Omega^0(U)\Rightarrow d(df)=0$
+  \end{enumerate}
+  Deduce that $d$ is independent of the coordinate system used to define it.
+\end{problem}
+
+\begin{proof}
+  
+\end{proof}
+
+\sk
+
+\begin{problem}
+  On the unit circle $S^1$ in the plane, let $\theta=\arctan(y/x)$ be the usual
+  polar coordinate. Show that $d\theta$ makes sense on $S^1$ and is a closed
+  1-form which is not exact.
+\end{problem}
+
+\begin{proof}
+  
+\end{proof}
+
+\sk
+
+\begin{problem}
+  For $\omega\in\Omega^1(M)$, verify the special case
+  $d\omega(X,Y)=X(\omega(Y))-Y(\omega(X))-\omega([X,Y])$ of the invariant
+  formula mentioned above Definition 2.4.
+\end{problem}
+
+\begin{proof}
+  
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

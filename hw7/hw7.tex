@@ -28,7 +28,7 @@
   On an open set $U\subset \bb{R^n}$ show that the exterior derivative $d$ is
   the only operator $d:\Omega^p(U)\rightarrow\Omega^{p+1}(U)$ satisfying:
   \begin{enumerate}
-  \item[(a)] $d(\omega+\eta)=d\omega+\eta$
+  \item[(a)] $d(\omega+\eta)=d\omega+d\eta$
   \item[(b)] $\omega\in\Omega^p(U),\eta\in\Omega^q(U)\Rightarrow
     d(\omega\wedge \eta)=d\omega\wedge\eta+(-1)^p\omega\wedge d\eta$
   \item[(c)] $f\in\Omega^0(U)\Rightarrow dfX)=X(f)$
@@ -38,7 +38,26 @@
 \end{problem}
 
 \begin{proof}
-  
+  First note that due to the linearity of $d$ that given a point $p$
+  the value of $d\omega_p$ only relies on a neighborhood of $p$.
+
+  Now suppose that $d'$ was another operator that fulfilled the same
+  properties as $d$. Then given $\omega=fdx_{i_1}\wedge\cdots\wedge dx_{i_p}\in\Omega^p(U)$
+  we have
+  \[
+    d'(fdx_{i_1}\wedge\cdots\wedge dx_{i_p})=d'fdx_{i_1}\wedge\cdots\wedge dx_{i_p} -\sum_1^p(-1)^pfdx_{i_1}\wedge\cdots\wedge d'dx_{i_j}\wedge\cdots\wedge dx_{i_p}
+  \]
+  However $d'dx_{i_j} = d'd'x_{i_j}= 0$ and $d'f=df$ hold by (c), (d) and the fact that
+  $d$ applied to a zero-form is not affected by coordinates we have that
+  \[
+    d'fdx_{i_1}\wedge\cdots\wedge dx_{i_p} -\sum_1^p(-1)^pfdx_{i_1}\wedge\cdots\wedge d'dx_{i_j}\wedge\cdots\wedge dx_{i_p} = df\wedge dx_{i_1}\wedge\cdots\wedge dx_{i_p}=d(f dx_{i_1}\wedge\cdots\wedge dx_{i_p})
+  \]
+  which shows that $d = d'$.
+
+  Since $d$ is unique and at a point only depends on a neighborhood of said point
+  given two neighborhoods of a point $p$ called $U,V$ even if they have different
+  coordinate systems must agree on $U\cap V$. Thus it must be the case that $d$ is
+  independent of coordinate systems.
 \end{proof}
 
 \sk
@@ -49,9 +68,17 @@
   1-form which is not exact.
 \end{problem}
 
-\begin{proof}
-  
-\end{proof}
+If we calculate $d\theta$ we get
+\[
+  d\theta = \frac{\partial \theta}{\partial x}dx+\frac{\partial\theta}{\partial y}dy = \frac{-ydx}{x^2+y^2} + \frac{xdy}{x^2+y^2}
+\]
+
+However since we are on the unit circle the bottom term becomes 1. Thus
+$d\theta=-ydx+xdy$ which is zero. Therefore $\theta$ is exact.
+
+To see that it is not closed evaluate the integral $\int_{S^1}\theta ds$. If it
+were closed the integral would be zero however it is $2\pi$. Therefore
+$\theta$ is not exact.
 
 \sk
 
@@ -62,7 +89,17 @@
 \end{problem}
 
 \begin{proof}
-  
+  Let $\omega=fdx\in\Omega^1(M)$. Then
+  \begin{align*}
+    d\omega(X,Y) &= d(fdx)(X,Y) \\
+            &= df\wedge dx(X,Y) \\
+            &= df(X)dx(Y)-df(Y)dx(X) \\
+            &= XfYx-YfXx \\
+            &= (XfYx+fXYx)-(YfXx+fYXx)-f(XYx-YXx) \\
+            &= X(fYx)-Y(fXx)-f[X,Y]x \\
+            &= X(\omega(Y))-Y(\omega(X))-\omega([X,Y])\\
+  \end{align*}
+  which completes the proof.
 \end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

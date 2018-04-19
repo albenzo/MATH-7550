@@ -31,19 +31,20 @@
   \item[(a)] $d(\omega+\eta)=d\omega+d\eta$
   \item[(b)] $\omega\in\Omega^p(U),\eta\in\Omega^q(U)\Rightarrow
     d(\omega\wedge \eta)=d\omega\wedge\eta+(-1)^p\omega\wedge d\eta$
-  \item[(c)] $f\in\Omega^0(U)\Rightarrow dfX)=X(f)$
+  \item[(c)] $f\in\Omega^0(U)\Rightarrow df(X)=X(f)$
   \item[(d)] $f\in\Omega^0(U)\Rightarrow d(df)=0$
   \end{enumerate}
   Deduce that $d$ is independent of the coordinate system used to define it.
 \end{problem}
 
 \begin{proof}
-  First note that due to the linearity of $d$ that given a point $p$
-  the value of $d\omega_p$ only relies on a neighborhood of $p$.
+  First note that due to the linearity of $d$ (pull out a bump function)
+  that given a point $p$ the value of $d\omega_p$ only relies on a
+  neighborhood of $p$.
 
   Now suppose that $d'$ was another operator that fulfilled the same
   properties as $d$. Then given $\omega=fdx_{i_1}\wedge\cdots\wedge dx_{i_p}\in\Omega^p(U)$
-  we have
+  through repeated applications of (b) we have
   \[
     d'(fdx_{i_1}\wedge\cdots\wedge dx_{i_p})=d'fdx_{i_1}\wedge\cdots\wedge dx_{i_p} -\sum_1^p(-1)^pfdx_{i_1}\wedge\cdots\wedge d'dx_{i_j}\wedge\cdots\wedge dx_{i_p}
   \]
@@ -74,13 +75,18 @@ If we calculate $d\theta$ we get
 \]
 
 However since we are on the unit circle the bottom term becomes 1. Thus
-$d\theta=-ydx+xdy$ which is zero. Therefore $\theta$ is exact.
+$d\theta=-ydx+xdy$. Since $\theta$ is not continuous when $x=0$ we cannot directly
+apply $d^2=0$ to $\theta$. However there are only two points where $\theta$ is
+discontinuous. If we throw out those points we have $d^2\theta=0$. Since
+$d^2\theta$ is a smooth 2-form on $S^1$ we cannot have nonzero points when
+$x=0$ as that would violate the smoothness. Thus $d^2\theta$ is uniformly
+zero which shows that $d\theta$ is closed.
 
-To see that it is not closed evaluate the integral $\int_{S^1}\theta ds$. If it
+To see that it is not closed evaluate the integral $\int_{S^1}d\theta$. If it
 were closed the integral would be zero however it is $2\pi$. Therefore
 $\theta$ is not exact.
 
-\sk
+\pagebreak
 
 \begin{problem}
   For $\omega\in\Omega^1(M)$, verify the special case

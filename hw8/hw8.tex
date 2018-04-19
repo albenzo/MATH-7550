@@ -23,6 +23,33 @@
 \newtheorem*{ppart}{}
 
 \begin{document}
-  Nothing yet
+
+\begin{problem}
+  Deduce from de Rham's Theorem that if $U\subset\bb{R}^3$ is open and
+  $H^1(U)=0$ then any vector field $\vec{F}$ on $U$ with
+  $\text{curl\ }\vec{F}=0$ is a gradient field.
+\end{problem}
+
+\begin{proof}
+  If there was a vector field with zero curl that was not a gradient
+  field that would imply that the $H^1(U)\neq 0$. As such the above property
+  must hold for any vector field.
+\end{proof}
+
+\sk
+
+\begin{problem}
+  Deduce from de Rham's Theorem that if $U\subset\bb{R}^3$ is open and
+  $H^2(U)=0$ then any vector field $\vec{F}$ on $U$ with $\text{div\ }\vec{F}=0$
+  has the form $\vec{F}=\text{curl\ }\vec{G}$ for some vector field
+  $\vec{G}$ on $U$.
+\end{problem}
+
+\begin{proof}
+  Similar to above if there were such a vector field that would imply that
+  $H^2(U)\neq 0$. As such if a vector field has zero divergence then it
+  must be the curl of some vector field.
+\end{proof}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
